@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style21.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- for swiper slider -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <!-- fancy box -->
+    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
+</head>
+<body>
+    <div id="navv">
+        <ul>
+            <li class="nav-item"><a href="main.html">Home</a></li>
+            <li class="nav-item"><a href="about.html">About</a></li>
+            <li class="nav-item"><a href="pro.html">Menu</a></li>
+            <li class="nav-item"><a href="#blog">Blog</a></li>
+            <li class="nav-item"><a href="#contact">Contact</a></li>
+        </ul>
+
+        <form action="#" class="header-search-form for-des">
+            <input type="search" class="form-input" placeholder="Search Here...">
+            <button type="submit">
+                <i class="uim uim-search"></i>
+            </button>
+        </form>
+
+        <a href="javascript:void(0)" class="header-btn header-cart">
+            <i class="uis uis-shopping-cart-alt"></i>
+            <span class="cart-number">3</span>
+        </a>
+
+        <!-- Sign up button -->
+        <button id="signup-btn" class="header-btn">
+            <i class="uil uil-user-md"></i> Sign Up
+        </button>
+
+        <!-- Sign in button -->
+        <button id="signin-btn" class="header-btn">
+            <i class="uil uil-user"></i> Sign In
+        </button>
+    </div>
+
+    <!-- Popup (Sign Up / Sign In) -->
+    <div id="popup" class="popup hidden">
+        <div class="popup-content">
+            <h2 id="popup-title">Sign Up</h2>
+            <form id="signup-form" class="form">
+                <div class="form-group">
+                    <h3>Username</h3>
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                </div>
+                <div class="form-group">
+                    <h3>Email</h3>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                    <div id="passwordWarning" style="display: none; color: red; font-size: 14px;">
+                        Password must be at least 8 characters long.
+                    </div>
+                </div>
+                <div class="form-group" id="confirm-password-section">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <div id="confirmPasswordWarning" style="display: none; color: red; font-size: 14px;">
+                        Passwords do not match.
+                    </div>
+                </div>
+                <button type="submit" id="popup-submit">Sign Up</button>
+                <button type="button" id="close-popup" class="close-btn">Close</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success message -->
+    <div id="success-message" class="hidden">
+        <p id="success-text"></p>
+        <button id="close-success">Close</button>
+    </div>
+
+    <!-- Main content -->
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+    <div class="mainimg">
+        <img src="spaceeeee.jpeg">
+    </div>
+
+    <div id="main">
+        <div id="page1">
+            <img src="gauntlet.png">
+            <div>
+                <h1>EAT. DRINK. ENJOY.</h1>
+                <h2>WELCOME TO OUR RESTAURANT!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo vel ipsam eaque voluptate eligendi? Earum recusandae voluptatibus tempora unde fugiat possimus inventore deserunt nobis odio, officia sed illo dicta temporibus.</p>
+            </div>
+        </div>    
+        <div id="page2">
+            <div id="scroller">
+                <div id="scroller-in" id="about">
+                    <h4>CRAVE SATISFACTION|</h4>
+                    <h4>FLAVORS UNMATCHED|</h4>
+                    <h4>TASTE VICTORY|</h4>
+                    <h4>EAT FRESH|</h4>
+                    <h4>FEEL GOOD|</h4>
+                </div>
+                <div id="scroller-in">
+                    <h4>CRAVE SATISFACTION|</h4>
+                    <h4>FLAVORS UNMATCHED|</h4>
+                    <h4>TASTE VICTORY|</h4>
+                    <h4>EAT FRESH|</h4>
+                    <h4>FEEL GOOD|</h4>
+                </div>
+            </div>
+            <div id="about-us">
+                <img src="" alt=""/>
+                <div id="about-us-in">
+                    <h3>ABOUT US</h3>
+                    <p>Home to a 46-bay, multi-tier, floodlit driving range...</p>
+                </div>
+                <img src="italianmain.jpg" alt=""/>
+            </div>
+        </div>
+
+        <div id="page3">
+            <div id="reviews-container">
+                <div class="review">
+                    <img id="colon1" src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-left.svg" alt="">
+                    <p class="review-text">"Delicious, freshly prepared meals..."</p>
+                    <p class="customer-name">- John Doe</p>
+                    <img id="colon2" src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-right.svg" alt="">
+                </div>
+                <div class="review">
+                    <img id="colon3" src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-left.svg" alt="">
+                    <p class="review-text">"From quick bites to hearty meals..."</p>
+                    <p class="customer-name">- Jane Smith</p>
+                    <img id="colon4" src="https://eiwgew27fhz.exactdn.com/wp-content/themes/puttosaurus/img/quote-right.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/font-awesome.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/jquery.fancybox.min.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/ScrollToPlugin.min.js"></script>
+    <script src="script21.js"></script>
+
+    <!-- Custom JavaScript for handling form and popup -->
+    <script>
+        $(document).ready(function() {
+            // Open Sign Up Popup
+            $('#signup-btn').click(function() {
+                $('#popup').show();
+                $('#popup-title').text('Sign Up');
+                $('#signup-form').attr('id', 'signup-form');
+                $('#popup-submit').text('Sign Up');
+                $('#confirm-password-section').show(); // Show the confirm password field for sign up
+            });
+
+            // Open Sign In Popup
+            $('#signin-btn').click(function() {
+                $('#popup').show();
+                $('#popup-title').text('Sign In');
+                $('#signup-form').attr('id', 'signin-form');
+                $('#popup-submit').text('Sign In');
+                $('#confirm-password-section').hide(); // Hide the confirm password field for sign in
+            });
+
+            // Close Popup
+            $('#close-popup').click(function() {
+                $('#popup').hide();
+            });
+
+            // Close Success Message
+            $('#close-success').click(function() {
+                $('#success-message').hide();
+            });
+
+            // Sign Up form submission
+            $('#signup-form').submit(function(event) {
+                event.preventDefault();
+
+                const username = $('#username').val();
+                const email = $('#email').val();
+                const password = $('#password').val();
+                const confirmPassword = $('#confirmPassword').val();
+
+                if (password.length < 8) {
+                    alert('Password must be at least 8 characters long.');
+                    return;
+                }
+
+                if (password !== confirmPassword) {
+                    alert('Passwords do not match.');
+                    return;
+                }
+
+                // Simulate AJAX request for Sign Up
+                setTimeout(function() {
+                    $('#popup').hide();
+                    $('#success-text').text('Sign Up Successful!');
+                    $('#success-message').show();
+                }, 1000);
+            });
+
+            // Sign In form submission (Add your sign-in logic here)
+            $('#signin-form').submit(function(event) {
+                event.preventDefault();
+
+                // Add sign-in validation and API call logic here
+
+                // Simulate AJAX request for Sign In
+                setTimeout(function() {
+                    $('#popup').hide();
+                    $('#success-text').text('Sign In Successful!');
+                    $('#success-message').show();
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>

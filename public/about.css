@@ -1,0 +1,426 @@
+/* Reset default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    color: #fff;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+/* About Us Section */
+#about-us {
+    background-color: rgba(0, 0, 0, 0.7); /* Slight transparency */
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  #about-us h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  #about-us p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    width: 80%;
+    margin: 0 auto;
+    color: #ddd;
+    margin-bottom: 30px;
+  }
+  
+  #about-us .about-image {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Card Styling for Services/Features */
+  #cards-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .card h4 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #ddd;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    #cards-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+  
+    #about-us p {
+      width: 90%;
+    }
+  }
+  
+
+/* Custom text selection color */
+*::selection {
+    background-color: #fff;
+    color: #95c11e;
+}
+
+/* Scrollbar styling */
+body::-webkit-scrollbar {
+    display: block;
+    width: 8px;
+    background: #95c11e;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 50px;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: #000; /* Set black background to match starry theme */
+}
+
+/* Cursor Customization */
+#cursor {
+    height: 20px;
+    width: 20px;
+    background-color: #95C11E;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+    pointer-events: none;
+}
+
+#cursor-blur {
+    height: 300px;
+    width: 300px;
+    background-color: #96c11e2b;
+    border-radius: 100%;
+    position: fixed;
+    filter: blur(20px);
+    z-index: 9;
+    pointer-events: none;
+    transition: transform 0.1s ease-out;
+}
+
+/* Navbar Styling */
+#navv {
+    height: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 45px;
+    padding: 0 150px;
+    position: fixed;
+    z-index: 99;
+}
+
+#navv img {
+    height: 80px;
+    margin-right: 100px;
+}
+
+#navv ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+#navv .nav-item {
+    position: relative;
+    margin-right: 20px;
+}
+
+#navv li {
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+#navv a {
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+#navv a:hover {
+    color: #95C11E;
+}
+
+.header-btn {
+    background: #95C11E;
+    color: white;
+    margin-right: 0px;
+    margin-left: 100px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.header-btn:hover {
+    background: #6aa7e8;
+}
+
+/* Popup Styles */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    width: 90%;
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+.popup-content h2 {
+    color: #000;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.signup-form input {
+    margin-top: 5px;
+}
+
+.signup-form {
+    margin: 0;
+}
+
+.signup-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.signup-form input {
+    color: #000;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.signup-btn {
+    background: #007BFF;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+
+.signup-btn:hover {
+    background: #0056b3;
+}
+
+.close-btn {
+    background: #f44336;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.close-btn:hover {
+    background: #d32f2f;
+}
+
+/* Main Image (Starry background) */
+.mainimg1 {
+    height: 100%;
+    width: 100%;
+    max-height: 300%;
+    object-fit: cover;
+    z-index: -1;
+    position: fixed;
+}
+/* Positioning the Thor image */
+#thor {
+    position: fixed;          /* Fix the image in place */
+    top: 10%;                 /* Adjust the distance from the top of the page */
+    left: 10px;               /* Align the image to the left of the page */
+    width: auto;              /* Maintain the aspect ratio */
+    height: 600px;            /* Set a specific height */
+    opacity: 1;             /* Semi-transparent */
+    border-radius: 10px;      /* Optional: rounded corners */
+    z-index: 10;  
+    margin-right: 400px;  
+    margin-top: 40px; 
+    margin-left: -250px; 
+    z-index: -1;  
+          /* Ensure the image is above other content */
+}
+
+/* Ensure text content doesn't overlap */
+/* #about-us {
+    padding-left: 200px;      /* Add some left padding to avoid overlap */
+
+
+/* About Us Section */
+#about-us {
+    
+    width: 100%;
+    padding: 80px 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6); /* Slight transparency */
+}
+
+#about-us h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-top: 75px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+#about-us p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    width: 70%;
+    margin: 0 auto;
+    color: #ddd;
+}
+
+#about-us img {
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    max-width: 800px; /* For large images */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Card Styling for Services/Features */
+#cards-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    width: 30%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card h4 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #fff;
+    z-index: 20;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+/* Green Deal Section */
+#green-div {
+    width: 100%;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+}
+
+#green-div h4 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#green-div img {
+    width: 80px;
+    height: auto;
+    margin-top: 30px;
+    filter: brightness(1.2);
+}
